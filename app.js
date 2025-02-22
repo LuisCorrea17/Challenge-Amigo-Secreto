@@ -7,7 +7,23 @@ function agregarAmigo() {
     if (textInput.value == '') {
         alert("Por favor, inserte un nombre");
     } else {
-        amigos.push(textInput);
+        amigos.push(textInput.value);
         textInput.value = '';
+        listaAmigos();
     }
+}
+
+function listaAmigos() {
+    let lista = document.querySelector(".name-list");
+    lista.innerHTML = '';
+    console.log(amigos);
+    amigos.forEach((amigo) => {
+        let li = document.createElement("li");
+        li.textContent = amigo;
+        lista.appendChild(li);
+    });
+}
+
+function sortearAmigo() {
+    
 }
