@@ -25,5 +25,17 @@ function listaAmigos() {
 }
 
 function sortearAmigo() {
-    
+    let indiceAleatorio = Math.floor(Math.random()*amigos.length);
+    let listaResultado = document.querySelector(".result-list");
+    if (listaResultado.hasChildNodes() == true) {
+        listaResultado.innerHTML = '';
+    }
+    if(amigos.length == 0){
+        alert("Debe ingresar nombres a la lista de amigos");
+    } else {
+        listaResultado = document.querySelector(".result-list");
+        let li = document.createElement("li");
+        li.textContent = amigos[indiceAleatorio];
+        listaResultado.appendChild(li);
+    }
 }
