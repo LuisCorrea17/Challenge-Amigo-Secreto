@@ -16,7 +16,6 @@ function agregarAmigo() {
 function listaAmigos() {
     let lista = document.querySelector(".name-list");
     lista.innerHTML = '';
-    console.log(amigos);
     amigos.forEach((amigo) => {
         let li = document.createElement("li");
         li.textContent = amigo;
